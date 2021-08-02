@@ -1,3 +1,6 @@
 import string, random, clipboard
 
-clipboard.copy(''.join([random.choice(string.ascii_letters + "123456789" + string.punctuation) for i in range(20)]))
+def generate_sample(length: int) -> str:
+  return clipboard.copy(''.join([random.choice(string.ascii_letters + string.digits + string.punctuation) for i in range(length)]))
+  
+generate_sample(10)
