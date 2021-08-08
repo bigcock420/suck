@@ -1,6 +1,2 @@
-import string, random, clipboard
-
-def generate_sample(length: int) -> str:
-  return clipboard.copy(''.join([random.choice(string.ascii_letters + string.digits + string.punctuation) for i in range(length)]))
+(lambda length: __import__('clipboard').copy(''.join([__import__('random').choice(__import__('string').ascii_letters + __import__('string').digits + __import__('string').punctuation) for i in range(length)])))(10)
   
-generate_sample(10)
